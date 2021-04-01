@@ -1,6 +1,5 @@
-﻿using System;
+﻿using AnimeCharacters.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace AnimeCharacters
 {
@@ -10,7 +9,7 @@ namespace AnimeCharacters
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new AnimeListView());
         }
 
         protected override void OnStart()

@@ -133,4 +133,10 @@
       <Name>AnimeCharacters</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\demonslayerlogo.webp" />
+    <BundleResource Include="Resources\dragonballsuperlogo.webp" />
+    <BundleResource Include="Resources\thepromisedneverlandlogo.png" />
+    <BundleResource Include="Resources\animecharacters.webp" />
+  </ItemGroup>
 </Project>

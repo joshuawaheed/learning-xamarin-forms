@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    BackgroundColor="#F5F5F5"
+    NavigationPage.HasNavigationBar="False"
+    Padding="0"
+    x:Class="AnimeCharacters.Views.AnimeListView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AnimeCharacters.Resources.Fonts">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout
+            Grid.Column="0"
+            Grid.Row="0"
+            Padding="30,54,30,48">
+            <Label
+                FontSize="36"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Start"
+                Text="Anime list!"
+                TextColor="#333333"
+                VerticalOptions="Center"/>
+            <Label
+                FontAttributes="None"
+                FontSize="18"
+                HorizontalTextAlignment="Start"
+                LineHeight="1.2"
+                Text="Select an anime."
+                TextColor="#666666"
+                VerticalOptions="Center"/>
+        </StackLayout>
+        <ScrollView
+            BackgroundColor="White"
+            Grid.Column="0"
+            Grid.Row="1">
+            <StackLayout
+                Padding="0,15,0,15">
+                <Grid
+                    Padding="30,15,30,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        HorizontalOptions="Start"
+                        Margin="0,0,18,0"
+                        Source="demonslayerlogo.webp"
+                        VerticalOptions="Start" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="Demon Slayer"
+                        TextColor="#333333" />
+                    <Label
+                        FontAttributes="None"
+                        FontSize="18"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="16/04/2019" />
+                    <Image
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        VerticalOptions="CenterAndExpand">
+                        <Image.Source>
+                            <FontImageSource
+                                Color="#333333"
+                                FontFamily="UserIcons"
+                                Glyph="{x:Static local:FontIcons.ChevronRight}"
+                                Size="88" />
+                        </Image.Source>
+                    </Image>
+                </Grid>
+                <Grid
+                    Padding="30,15,30,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        HorizontalOptions="Start"
+                        Margin="0,0,18,0"
+                        Source="dragonballsuperlogo.webp"
+                        VerticalOptions="Start" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="Dragon Ball Super"
+                        TextColor="#333333" />
+                    <Label
+                        FontAttributes="None"
+                        FontSize="18"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="05/07/2015" />
+                    <Image
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        VerticalOptions="CenterAndExpand">
+                        <Image.Source>
+                            <FontImageSource
+                                Color="#333333"
+                                FontFamily="UserIcons"
+                                Glyph="{x:Static local:FontIcons.ChevronRight}"
+                                Size="88" />
+                        </Image.Source>
+                    </Image>
+                </Grid>
+                <Grid
+                    Padding="30,15,30,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        HorizontalOptions="Start"
+                        Margin="0,0,18,0"
+                        Source="thepromisedneverlandlogo.png"
+                        VerticalOptions="Start" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="The Promised Neverland"
+                        TextColor="#333333" />
+                    <Label
+                        FontAttributes="None"
+                        FontSize="18"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="11/01/2019" />
+                    <Image
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        VerticalOptions="CenterAndExpand">
+                        <Image.Source>
+                            <FontImageSource
+                                Color="#333333"
+                                FontFamily="UserIcons"
+                                Glyph="{x:Static local:FontIcons.ChevronRight}"
+                                Size="88" />
+                        </Image.Source>
+                    </Image>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
