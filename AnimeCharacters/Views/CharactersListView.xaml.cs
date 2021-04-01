@@ -15,6 +15,9 @@ namespace AnimeCharacters.Views
 
         void CharactersListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var character = e.CurrentSelection[0] as Character;
+            var characterView = new CharacterView(character);
+            Navigation.PushAsync(characterView);
         }
     }
 }
