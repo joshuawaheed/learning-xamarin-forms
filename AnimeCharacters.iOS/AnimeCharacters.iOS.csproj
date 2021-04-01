@@ -137,6 +137,11 @@
     <BundleResource Include="Resources\demonslayerlogo.webp" />
     <BundleResource Include="Resources\dragonballsuperlogo.webp" />
     <BundleResource Include="Resources\thepromisedneverlandlogo.png" />
-    <BundleResource Include="Resources\animecharacters.webp" />
+    <BundleResource Include="Resources\emmaavatar.png" />
+    <BundleResource Include="Resources\gokuavatar.png" />
+    <BundleResource Include="Resources\normanavatar.jpg" />
+    <BundleResource Include="Resources\tanjiroavatar.jpeg" />
+    <BundleResource Include="Resources\vegetaavatar.png" />
+    <BundleResource Include="Resources\zenitsuavatar.jpg" />
   </ItemGroup>
 </Project>

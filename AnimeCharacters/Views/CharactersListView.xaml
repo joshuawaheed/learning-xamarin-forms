@@ -1,13 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
     BackgroundColor="#F5F5F5"
-    NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasNavigationBar="True"
     Padding="0"
-    x:Class="AnimeCharacters.Views.AnimeListView"
+    x:Class="AnimeCharacters.Views.CharactersListView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:local="clr-namespace:AnimeCharacters.Resources.Fonts"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Grid>
+    <Grid
+        x:Name="animeDetail">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -18,14 +19,12 @@
         <StackLayout
             Grid.Column="0"
             Grid.Row="0"
-            Padding="30,54,30,48">
-            <Label
-                FontSize="36"
-                FontAttributes="Bold"
-                HorizontalTextAlignment="Start"
-                Text="Anime list!"
-                TextColor="#333333"
-                VerticalOptions="Center"/>
+            Padding="30,30,30,30">
+            <Image
+                HorizontalOptions="CenterAndExpand"
+                Source="{Binding ImageUrl}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="200"/>
         </StackLayout>
         <ScrollView
             BackgroundColor="White"
@@ -34,19 +33,8 @@
             Padding="0,15,0,15">
             <CollectionView
                 SelectionMode="Single"
-                SelectionChanged="AnimeListView_SelectionChanged"
-                x:Name="animeListView">
-                <CollectionView.EmptyView>
-                    <StackLayout>
-                        <Label
-                            FontAttributes="Bold"
-                            FontSize="18"
-                            HorizontalOptions="CenterAndExpand"
-                            VerticalOptions="CenterAndExpand">
-                            No anime to show
-                        </Label>
-                    </StackLayout>
-                </CollectionView.EmptyView>
+                SelectionChanged="CharactersListView_SelectionChanged"
+                x:Name="charactersListView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid
@@ -80,7 +68,9 @@
                                 FontSize="18"
                                 Grid.Column="1"
                                 Grid.Row="1"
-                                Text="{Binding ReleaseDate, StringFormat='{0:MMMM dd, yyyy}'}" />
+                                Text="{Binding Description}"
+                                LineBreakMode="TailTruncation"
+                                WidthRequest="20"/>
                             <Image
                                 Grid.Column="2"
                                 Grid.Row="0"
