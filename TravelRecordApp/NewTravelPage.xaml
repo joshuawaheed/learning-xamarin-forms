@@ -12,5 +12,39 @@
         <Entry
             Placeholder="Write your experience"
             x:Name="experienceEntry"/>
+        <ListView
+            HorizontalOptions="FillAndExpand"
+            Margin="20, 0"
+            x:Name="venueListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label
+                                FontAttributes="Bold"
+                                Text="{Binding Name}"/>
+                            <Label
+                                Grid.Row="1"
+                                Text="{Binding Location.Address}"
+                                TextColor="DodgerBlue"/>
+                            <Label
+                                Grid.Column="1"
+                                Text="{
+                                    Binding Location.Distance,
+                                    StringFormat='{0}, meters'
+                                }"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>

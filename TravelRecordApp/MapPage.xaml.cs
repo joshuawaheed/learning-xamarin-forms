@@ -4,6 +4,8 @@ using Plugin.Geolocator;
 using Plugin.Geolocator.Abstractions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
+using SQLite;
+using TravelRecordApp.Model;
 using Xamarin.Forms;
 
 namespace TravelRecordApp
@@ -25,22 +27,57 @@ namespace TravelRecordApp
             if (hasLocationPermission)
             {
                 var locator = CrossGeolocator.Current;
-
                 locator.PositionChanged += Locator_PositionChanged;
-
                 await locator.StartListeningAsync(TimeSpan.Zero, 100);
             }
 
             GetLocation();
+
+            using (var conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Post>();
+                var posts = conn.Table<Post>().ToList();
+                DisplayInMap(posts);
+            }
         }
 
         protected override async void OnDisappearing()
         {
             base.OnDisappearing();
-
             await CrossGeolocator.Current.StopListeningAsync();
-
             CrossGeolocator.Current.PositionChanged -= Locator_PositionChanged;
+        }
+
+        private void DisplayInMap(List<Post> posts)
+        {
+            foreach (var post in posts)
+            {
+                try
+                {
+                    var position = new Xamarin.Forms.Maps.Position(
+                        post.Latitude,
+                        post.Longitude
+                    );
+
+                    var pin = new Xamarin.Forms.Maps.Pin
+                    {
+                        Address = post.Address,
+                        Label = post.VenueName,
+                        Position = position,
+                        Type = Xamarin.Forms.Maps.PinType.SavedPin
+                    };
+
+                    locationsMap.Pins.Add(pin);
+                }
+                catch (NullReferenceException nre)
+                {
+
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
         }
 
         private async void GetLocation()
@@ -49,7 +86,6 @@ namespace TravelRecordApp
             {
                 var locator = CrossGeolocator.Current;
                 var position = await locator.GetPositionAsync();
-
                 MoveMap(position);
             }
         }
@@ -59,9 +95,7 @@ namespace TravelRecordApp
             try
             {
                 var currentCrossPermission = CrossPermissions.Current;
-
                 var permission = Permission.LocationWhenInUse;
-
                 var status = await currentCrossPermission.CheckPermissionStatusAsync(permission);
 
                 if (status != PermissionStatus.Granted)
@@ -86,7 +120,6 @@ namespace TravelRecordApp
                 {
                     hasLocationPermission = true;
                     locationsMap.IsShowingUser = true;
-
                     GetLocation();
                 }
                 else

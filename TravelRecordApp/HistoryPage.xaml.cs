@@ -18,13 +18,10 @@ namespace TravelRecordApp
         {
             base.OnAppearing();
 
-            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            using (var conn = new SQLiteConnection(App.DatabaseLocation))
             {
-
                 conn.CreateTable<Post>();
-
                 var posts = conn.Table<Post>().ToList();
-
                 postListView.ItemsSource = posts;
             }
         }
