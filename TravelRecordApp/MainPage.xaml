@@ -6,6 +6,13 @@
     <StackLayout
         Margin="20"
         VerticalOptions="Center">
+        <Image
+            Aspect="AspectFit"
+            HeightRequest="150"
+            HorizontalOptions="FillAndExpand"
+            Margin="0,0,0,50"
+            Source="plane.png"
+            x:Name="iconImage"/>
         <Entry
             Keyboard="Email"
             Placeholder="Email address"

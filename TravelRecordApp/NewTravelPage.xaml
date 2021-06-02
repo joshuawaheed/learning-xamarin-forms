@@ -6,6 +6,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Clicked="ToolbarItem_Clicked"
+            IconImageSource="save.png"
             Text="Save"/>
     </ContentPage.ToolbarItems>
     <StackLayout>

@@ -52,11 +52,11 @@ namespace TravelRecordApp
                     }
                 }
             }
-            catch (NullReferenceException nre)
+            catch (NullReferenceException)
             {
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

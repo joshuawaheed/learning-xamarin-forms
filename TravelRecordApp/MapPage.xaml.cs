@@ -69,11 +69,11 @@ namespace TravelRecordApp
 
                     locationsMap.Pins.Add(pin);
                 }
-                catch (NullReferenceException nre)
+                catch (NullReferenceException)
                 {
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
