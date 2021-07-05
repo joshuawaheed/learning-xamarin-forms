@@ -1,10 +1,8 @@
-﻿using System;
-
+﻿using System.IO;
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
 using Android.OS;
-using System.IO;
+using Android.Runtime;
 using Plugin.Permissions;
 
 namespace TravelRecordApp.Droid

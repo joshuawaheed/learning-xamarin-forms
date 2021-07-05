@@ -32,6 +32,7 @@ namespace TravelRecordApp
                     Experience = experienceEntry.Text,
                     Latitude = selectedVenue.Location.Lat,
                     Longitude = selectedVenue.Location.Lng,
+                    UserId = App.User.Id,
                     VenueName = selectedVenue.Name
                 };
 

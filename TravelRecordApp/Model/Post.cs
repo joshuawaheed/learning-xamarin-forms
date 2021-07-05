@@ -22,6 +22,8 @@ namespace TravelRecordApp.Model
 
         public double Longitude { get; set; }
 
+        public int UserId { get; set; }
+
         public string VenueName { get; set; }
     }
 }

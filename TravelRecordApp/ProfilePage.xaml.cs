@@ -22,9 +22,12 @@ namespace TravelRecordApp
             {
                 conn.CreateTable<Post>();
 
-                var postTable = conn.Table<Post>().ToList();
+                var posts = conn
+                    .Table<Post>()
+                    .Where(p => p.UserId == App.User.Id)
+                    .ToList();
 
-                var categories = postTable
+                var categories = posts
                     .OrderBy(p => p.CategoryId)
                     .Select(p => p.CategoryName)
                     .Distinct()
@@ -34,7 +37,7 @@ namespace TravelRecordApp
 
                 foreach (var category in categories)
                 {
-                    var count = postTable
+                    var count = posts
                         .Where(p => p.CategoryName == category)
                         .ToList()
                         .Count;
@@ -43,7 +46,7 @@ namespace TravelRecordApp
                 }
 
                 categoriesListView.ItemsSource = categoriesCount;
-                postCountLabel.Text = postTable.Count.ToString();
+                postCountLabel.Text = posts.Count.ToString();
             }
         }
     }

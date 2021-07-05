@@ -1,12 +1,13 @@
-﻿using System;
+﻿using TravelRecordApp.Model;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TravelRecordApp
 {
     public partial class App : Application
     {
         public static string DatabaseLocation = string.Empty;
+
+        public static Users User = new Users();
 
         public App()
         {
