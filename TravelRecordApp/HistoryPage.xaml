@@ -2,9 +2,17 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:TravelRecordApp.ViewModels"
     x:Class="TravelRecordApp.HistoryPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <viewModel:HistoryViewModel x:Key="viewModel" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ListView
-        ItemSelected="postListView_ItemSelected"
+        BindingContext="{StaticResource viewModel}"
+        ItemsSource="{Binding Posts}"
+        SelectedItem="{Binding SelectedPost}"
         x:Name="postListView">
         <ListView.ItemTemplate>
             <DataTemplate>

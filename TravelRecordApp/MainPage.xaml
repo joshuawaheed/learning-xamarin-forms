@@ -2,8 +2,15 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:TravelRecordApp.ViewModels"
     x:Class="TravelRecordApp.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <viewModel:MainViewModel x:Key="viewModel"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout
+        BindingContext="{StaticResource viewModel}"
         Margin="20"
         VerticalOptions="Center">
         <Image
@@ -16,21 +23,24 @@
         <Entry
             Keyboard="Email"
             Placeholder="Email address"
+            Text="{Binding Email}"
             TextColor="{StaticResource blueColor}"
             x:Name="emailEntry"/>
         <Entry
             IsPassword="True"
             Placeholder="Password"
+            Text="{Binding Password}"
             TextColor="{StaticResource blueColor}"
             x:Name="passwordEntry"/>
         <Button
-            Clicked="LoginButton_Clicked"
+            Command="{Binding LoginCommand}"
+            CommandParameter="{Binding EntriesHaveText}"
             Margin="0,50,0,0"
             Style="{StaticResource normalButton}"
             Text="Log in"
             x:Name="LoginButton"/>
         <Button
-            Clicked="RegisterUserButton_Clicked"
+            Command="{Binding RegisterCommand}"
             HorizontalOptions="End"
             Text="Register"
             x:Name="registerUserButton"/>

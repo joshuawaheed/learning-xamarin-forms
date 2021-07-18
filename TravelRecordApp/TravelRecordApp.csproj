@@ -22,6 +22,11 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Logic\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ViewModels\" />
+    <None Remove="Commands\" />
   </ItemGroup>
 </Project>
