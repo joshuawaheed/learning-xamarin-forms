@@ -33,6 +33,7 @@ namespace ExpensesApp.ViewModels
 
         public void GetExpensesPerCategory()
         {
+            CategoryExpensesCollection.Clear();
             float totalExpensesAmount = Expense.TotalExpensesAmount();
 
             foreach (var c in Categories)
