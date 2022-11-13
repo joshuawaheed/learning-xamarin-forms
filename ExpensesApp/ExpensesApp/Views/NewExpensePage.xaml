@@ -16,7 +16,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Source={StaticResource vm}}">
-            <TableView>
+            <TableView x:Name="expenseTableView">
                 <TableRoot>
                     <TableSection>
                         <EntryCell
