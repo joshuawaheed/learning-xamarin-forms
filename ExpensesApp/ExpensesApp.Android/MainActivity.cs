@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using System.IO;
 
 namespace ExpensesApp.Droid
 {
@@ -16,7 +17,12 @@ namespace ExpensesApp.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+            string db_name = "expenses_db.db3";
+            string folder_path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal));
+            string full_path = Path.Combine(folder_path, db_name);
+
+            LoadApplication(new App(full_path));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
