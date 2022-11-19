@@ -66,6 +66,7 @@
     <Compile Include="CustomRenderers\CustomProgressBarRenderer.cs" />
     <Compile Include="CustomRenderers\CustomTextCellRenderer.cs" />
     <Compile Include="CustomRenderers\CustomViewCellRenderer.cs" />
+    <Compile Include="Dependencies\Share.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="CustomRenderers\" />
+    <Folder Include="Dependencies\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExpensesApp\ExpensesApp.csproj">
