@@ -67,6 +67,7 @@
     <Compile Include="CustomRenderers\CustomTextCellRenderer.cs" />
     <Compile Include="CustomRenderers\CustomViewCellRenderer.cs" />
     <Compile Include="Dependencies\Share.cs" />
+    <Compile Include="Effects\SelectedEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -158,6 +159,7 @@
     <Folder Include="CustomRenderers\" />
     <Folder Include="Dependencies\" />
     <Folder Include="Resources\xml\" />
+    <Folder Include="Effects\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExpensesApp\ExpensesApp.csproj">

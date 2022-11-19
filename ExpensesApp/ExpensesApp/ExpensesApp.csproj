@@ -24,6 +24,7 @@
     <None Remove="Interfaces\" />
     <None Remove="PCLStorage" />
     <None Remove="Behaviors\" />
+    <None Remove="Effects\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -31,5 +32,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Behaviors\" />
+    <Folder Include="Effects\" />
   </ItemGroup>
 </Project>

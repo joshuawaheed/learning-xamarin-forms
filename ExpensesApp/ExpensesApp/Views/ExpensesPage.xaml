@@ -25,7 +25,7 @@
                     <TextCell
                         Text="{Binding Name}"
                         Detail="{Binding Category}"
-                        StyleId="checkmark" />
+                        StyleId="none" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
