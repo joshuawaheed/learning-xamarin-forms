@@ -23,11 +23,13 @@
     <None Remove="ViewModels\" />
     <None Remove="Interfaces\" />
     <None Remove="PCLStorage" />
+    <None Remove="Behaviors\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Behaviors\" />
   </ItemGroup>
 </Project>
