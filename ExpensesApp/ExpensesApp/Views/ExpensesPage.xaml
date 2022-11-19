@@ -18,7 +18,10 @@
         <ListView ItemsSource="{Binding Source={StaticResource vm}, Path=Expenses}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Category}" />
+                    <TextCell
+                        Text="{Binding Name}"
+                        Detail="{Binding Category}"
+                        StyleId="checkmark" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
