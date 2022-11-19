@@ -14,6 +14,7 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -21,6 +22,7 @@
     <None Remove="sqlite-net-pcl" />
     <None Remove="ViewModels\" />
     <None Remove="Interfaces\" />
+    <None Remove="PCLStorage" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
