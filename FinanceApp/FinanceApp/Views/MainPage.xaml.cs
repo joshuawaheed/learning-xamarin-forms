@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace FinanceApp.Views
-{	
-	public partial class MainPage : ContentPage
+{
+    public partial class MainPage : ContentPage
 	{	
-		public MainPage ()
+		public MainPage()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+			Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.SetUseSafeArea(this, true);
 		}
 	}
 }
