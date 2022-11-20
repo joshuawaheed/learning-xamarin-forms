@@ -10,7 +10,9 @@ namespace FinanceApp.ViewModels
 {
 	public class MainViewModel : INotifyPropertyChanged
 	{
-		public Posts Blog { get; set; }
+		private const string RssFeedAddress = "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664";
+
+        public Posts Blog { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -25,7 +27,7 @@ namespace FinanceApp.ViewModels
 
 			using (WebClient client = new WebClient())
 			{
-				string xml = Encoding.Default.GetString(client.DownloadData("https://www.finzen.mx/blog-feed.xml"));
+				string xml = Encoding.Default.GetString(client.DownloadData(RssFeedAddress));
 
 				using (Stream reader = new MemoryStream(Encoding.UTF8.GetBytes(xml)))
 				{

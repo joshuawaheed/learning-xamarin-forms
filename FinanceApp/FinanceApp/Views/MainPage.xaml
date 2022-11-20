@@ -36,16 +36,12 @@
                             Padding="0"
                             Margin="10">
                             <StackLayout>
-                                <Image
-                                    Source="{Binding Enclosure.Url}"
-                                    HeightRequest="200"
-                                    Aspect="AspectFill" />
                                 <Label
                                     Text="{Binding Title}"
                                     Margin="20,0"
                                     Style="{StaticResource smallTitleLabel}" />
                                 <Label
-                                    Text="{Binding Creator}"
+                                    Text="{Binding Description}"
                                     Margin="20,0,20,10"
                                     Style="{StaticResource normalLabel}" />
                             </StackLayout>
