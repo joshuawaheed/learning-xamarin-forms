@@ -152,6 +152,7 @@
     <BundleResource Include="Resources\expenses%403x.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\profits.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />

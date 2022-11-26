@@ -41,6 +41,10 @@ namespace ExpensesApp.Views
         {
             VisualStateManager.GoToState(exampleButton, "Normal");
         }
+
+        private void ImageButton_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
 

@@ -58,6 +58,26 @@
                     </VisualStateGroup>
                 </VisualStateManager.VisualStateGroups>
             </Button>
+            <ImageButton
+                Clicked="ImageButton_Clicked"
+                HeightRequest="300"
+                Source="profits.png"
+                WidthRequest="300">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup Name="CommonStates">
+                        <VisualState Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
             <ListView ItemsSource="{Binding Source={StaticResource vm}, Path=CategoryExpensesCollection}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
