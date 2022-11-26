@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
+    ios:Page.UseSafeArea="True"
+    x:Class="ExpensesApp.Views.ExpenseDetailsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:vm="clr-namespace:ExpensesApp.ViewModels"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ExpensesApp.Views.ExpenseDetailsPage">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Resources>
         <ResourceDictionary>
             <vm:ExpenseDetailsViewModel x:Key="vm" />
