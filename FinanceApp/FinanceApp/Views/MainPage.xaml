@@ -6,7 +6,8 @@
     xmlns:behaviors="clr-namespace:FinanceApp.Behaviors"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:vm="clr-namespace:FinanceApp.ViewModels"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Finance">
     <ContentPage.Resources>
         <ResourceDictionary>
             <vm:MainViewModel x:Key="vm" />
