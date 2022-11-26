@@ -25,6 +25,7 @@
     <None Remove="PCLStorage" />
     <None Remove="Behaviors\" />
     <None Remove="Effects\" />
+    <None Remove="Stylesheets\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -33,5 +34,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Effects\" />
+    <Folder Include="Stylesheets\" />
   </ItemGroup>
 </Project>
