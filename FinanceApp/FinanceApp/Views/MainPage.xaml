@@ -13,12 +13,18 @@
             Spacing="10"
             VerticalOptions="Center">
             <Image Source="icon.png" />
-            <Label Text="Finance" VerticalOptions="Center" />
+            <Label
+                FontAttributes="Bold"
+                Text="Finance"
+                TextColor="{OnPlatform Android={StaticResource androidAccent}, iOS={StaticResource iOSAccent}, Default=Black}"
+                VerticalOptions="Center" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Resources>
         <ResourceDictionary>
             <vm:MainViewModel x:Key="vm" />
+            <Color x:Key="androidAccent">#A4C639</Color>
+            <Color x:Key="iOSAccent">#0088CC</Color>
             <Style TargetType="Label" x:Key="smallTitleLabel">
                 <Setter Property="FontSize" Value="15" />
                 <Setter Property="FontAttributes" Value="Bold" />
